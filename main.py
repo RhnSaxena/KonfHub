@@ -26,6 +26,13 @@ def driver():
     print("The events have been printed in readable format.")
 
     eventDict = createMap(response)
+    writeToJSONFile(
+        "./{folder}/{file}.{extension}".format(
+            folder=config.folder, file=config.eventsFileName, extension="json"
+        ),
+        eventDict,
+    )
+    print("The events have been printed.")
 
     duplicatesDict = findExactReplicas(eventDict)
     writeToJSONFile(
@@ -34,7 +41,7 @@ def driver():
         ),
         duplicatesDict,
     )
-    print("The duplicates events have been printed in.")
+    print("The duplicates events have been printed.")
 
     similarDict = findSimilar(eventDict)
     writeToJSONFile(
