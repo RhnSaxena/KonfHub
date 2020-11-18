@@ -1,3 +1,4 @@
+#  Creates and returns a dictionary of readable events.
 def createReadableDict(data):
     dataDict = {}
     index = 0
@@ -9,6 +10,7 @@ def createReadableDict(data):
     return dataDict
 
 
+# Returns a readable string for a dictionary item.
 def getReadableValue(entry):
     return "{conferenceName}, {startDate}, {location}, {state}, {country}, {category}. {link}".format(
         conferenceName=entry["confName"],
