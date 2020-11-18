@@ -1,17 +1,49 @@
-from requests_function import request_get
-from readable import refine
-from config import link
 import json
-from replicas import createMap
+import config
+from source.requestUtil import requestGet
+from source.readable import createReadableDict
+from source.replicas import createMap, findExactReplicas, findSimilar
+from source.fileWriter import writeToJSONFile, writeToTXT
 
 
 def driver():
-    response = request_get(link)
-    print(refine(response))
-    h= createMap(response)
-    jsonText = json.dumps(h)
-    f = open("dict.json","w")
-    f.write(jsonText)
-    f.close()
+
+    response = requestGet(config.link)
+
+    readableData = createReadableDict(response)
+    writeToJSONFile(
+        "./{folder}/{file}.{extension}".format(
+            folder=config.folder, file=config.readableFileName, extension="json"
+        ),
+        readableData,
+    )
+    writeToTXT(
+        "./{folder}/{file}.{extension}".format(
+            folder=config.folder, file=config.readableFileName, extension="txt"
+        ),
+        readableData,
+    )
+    print("The events have been printed in readable format.")
+
+    eventDict = createMap(response)
+
+    duplicatesDict = findExactReplicas(eventDict)
+    writeToJSONFile(
+        "./{folder}/{file}.{extension}".format(
+            folder=config.folder, file=config.exactDuplicatesFileName, extension="json"
+        ),
+        duplicatesDict,
+    )
+    print("The duplicates events have been printed in.")
+
+    similarDict = findSimilar(eventDict)
+    writeToJSONFile(
+        "./{folder}/{file}.{extension}".format(
+            folder=config.folder, file=config.similarEventsFileName, extension="json"
+        ),
+        similarDict,
+    )
+    print("The similar events have been printed.")
+
 
 driver()

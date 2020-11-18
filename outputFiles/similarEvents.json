@@ -1,0 +1,23 @@
+{
+    "0": {
+        "emailId": "",
+        "city": "  Mumbai ",
+        "twitter_handle": "",
+        "user_id": "1579602074",
+        "country": " India",
+        "imageURL": "https://storage.googleapis.com/konfhub-bd9c9.appspot.com/80835.jpg?Expires=4733720417&GoogleAccessId=firebase-adminsdk-r3qh4%40konfhub-bd9c9.iam.gserviceaccount.com&Signature=G1FMqYp9fJsgE7dEDLp4S7jPQ6Ysx06C2j%2FlMcVqQD2xxULY0O83KSng2a5SWK69HSSCsJyAZGdmJOkZwqXfYCEzK9YxGAObDd%2F4FBXJK8hgW2%2FKnUcpxjNWWkF9SaqYO22cmk0A6e5A7W%2BIworwz5Ev4Ct4%2Bfy%2BizjvgaH6GtEu0rtRCnuLnvu1WQtMns%2BHZiDPTEpEk3DHw3B%2B5lP0JFuvJfEpFE6ZgVoG3Y%2FZweAsSYTCeW%2FT9bgz35yNhLbLS4cTeBvSmEynmz%2FYvSfWD6zBzHfX3v8Y10tB%2BMb3PMLrV56L2APFolF39zBWvp1BzuSbo8dTwDdasL24bxxV9A%3D%3D",
+        "venue": "Bombay Exhibition Centre NESCO, Goregaon East, Mumbai, Maharashtra 400063, India",
+        "searchTerms": "AWS Summit Mumbai, cloud computing,AWS,DevOps, April, Paid, 1580120419,  India",
+        "confName": "AWS Summit Mumbai",
+        "state": "Maharashtra ",
+        "long": "72.877426",
+        "confEndDate": "09 April, 2020",
+        "conference_id": 1580120419,
+        "lat": "19.076090",
+        "keywordSupport": "cloud computing,AWS,DevOps",
+        "confUrl": "https://aws.amazon.com/events/summits/mumbai/",
+        "confStartDate": "08 April, 2020",
+        "entryType": "Paid",
+        "confRegUrl": "https://pages.awscloud.com/summit-mumbai-2020.html"
+    }
+}
